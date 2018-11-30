@@ -14,19 +14,19 @@
 
         public static function setName($name){
 
-            self::$name = $name;
+            static::$name = $name;
         }
 
         public static function getName() {
 
-            return self::$name;
+            return static::$name;
         }
     }
 
     class NguoiLon extends ConNguoi{
 
         public static function getName() {
-            return ConNguoi::getName();
+            return parent::getName();
 
         }
     }
@@ -44,7 +44,14 @@
     echo "</br>";
     echo $connguoi->getName();
 
+    // Final có ý nghia là sau cùng không m?t l?p k? thùa và ph??ng thúc không th? ghi ?è
 
+    final class TreEm {
+
+        final function show() {
+
+        }
+    }
 
 
 ?>
