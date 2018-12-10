@@ -16,6 +16,12 @@
 
             echo "Hàm H?y";
         }
+
+        public function Show() {
+            echo "Hàm show";
+        }
     }
     $khoi = new Khoitao();
+    $khoi->Show();
+
 ?>
