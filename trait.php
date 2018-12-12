@@ -1,26 +1,25 @@
 <?php
 namespace TraitAge;
 
-trait SetGetAge {
-    public function setAge($age) {
-        $this->age = $age;
+trait Age {
+
+    protected static $name = "nguyen";
+    public function setName($name) {
+
+        $this->name = $name;
+    }
+    public function getName() {
+        return $this->name;
     }
 
-    public function getAge() {
-        return $this->age;
-    }
 }
-
-class ConNguoi {
-
-    use SetGetAge;
-
+class Dung {
+    use Age;
 
 }
 
-$connguoi = new ConNguoi();
-$connguoi->setAge(34);
-echo $connguoi->getAge();
-
+$connguoi = new Dung();
+$connguoi->setName("Nguyên van dung");
+echo $connguoi->getName();
 
 ?>
